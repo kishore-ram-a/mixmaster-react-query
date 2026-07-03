@@ -1,13 +1,22 @@
-import { createBrowserRouter,RouterProvider } from "react-router-dom";
-import { About,CockTail, Error, HomeLayout, Landing, NewsLetter, } from "./pages";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import {
+  About,
+  CockTail,
+  Error,
+  HomeLayout,
+  Landing,
+  NewsLetter,
+} from './pages'
+
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <HomeLayout />, // This stays as your wrapper layout with the navbar and <Outlet />
+    element: <HomeLayout />,
+    errorElement: <Error />,
     children: [
       {
         index: true,
-        element: <Landing />, //  FIX: Render your landing/home page content here instead of HomeLayout
+        element: <Landing />,
       },
       {
         path: 'about',
@@ -22,24 +31,19 @@ const router = createBrowserRouter([
         element: <CockTail />,
       },
       {
-        path: 'error',
-        element: <Error />,
-      },
-      {
-        path: 'landing', // You can keep or remove this since index: true covers the base path
-        element: <Landing />,
-      },
-      {
         path: 'newsletter',
         element: <NewsLetter />,
       },
-    ]
+      {
+        path: '*',
+        element: <Error />,
+      },
+    ],
   },
 ])
 
-
-
 const App = () => {
-  return <RouterProvider router={router}/>;
-};
-export default App;
+  return <RouterProvider router={router} />
+}
+
+export default App
