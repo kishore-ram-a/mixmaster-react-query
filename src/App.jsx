@@ -8,6 +8,7 @@ import {
   NewsLetter,
 } from './pages'
 import { loader as drinkLoader } from './pages/Landing'
+import { loader as singlePageLoader } from './pages/CockTail'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
       {
         path: 'cocktail/:id',
         element: <CockTail />,
+        loader: singlePageLoader,
       },
       {
         path: 'newsletter',

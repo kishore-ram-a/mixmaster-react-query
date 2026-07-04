@@ -3,7 +3,7 @@ import Wrapper from '../assets/wrappers/CocktailCard'
 import { Link } from 'react-router-dom'
 const CocktailCard = ({ id, image, name, glass, info }) => {
   return (
-    <wrapper>
+    <Wrapper>
       <div className='img-container'>
         <img src={image} alt={name} className='img' />
       </div>
@@ -15,7 +15,7 @@ const CocktailCard = ({ id, image, name, glass, info }) => {
           Detail
         </Link>
       </div>
-    </wrapper>
+    </Wrapper>
   )
 }
 
