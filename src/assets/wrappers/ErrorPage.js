@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const Wrapper = styled.div`
   min-height: 100vh;
@@ -14,7 +14,7 @@ const Wrapper = styled.div`
     margin-top: -3rem;
   }
   h3 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.51rem;
   }
 
   p {
@@ -27,6 +27,6 @@ const Wrapper = styled.div`
     color: var(--primary-500);
     text-transform: capitalize;
   }
-`;
+`
 
-export default Wrapper;
+export default Wrapper

@@ -1,11 +1,11 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const Wrapper = styled.div`
   p {
     line-height: 2;
     color: var(--grey-500);
-    margin-top: 2rem;
+    margin-top: 2.1rem;
   }
-`;
+`
 
-export default Wrapper;
+export default Wrapper

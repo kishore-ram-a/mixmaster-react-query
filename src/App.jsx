@@ -28,7 +28,7 @@ const router = createBrowserRouter([
         element: <h1>secret page</h1>,
       },
       {
-        path: 'cocktail',
+        path: 'cocktail/:id',
         element: <CockTail />,
       },
       {
