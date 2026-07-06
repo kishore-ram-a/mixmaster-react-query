@@ -6,12 +6,12 @@ const CocktailList = ({ drinks }) => {
     return <h4 style={{ textAlign: 'center' }}>No drinks found...</h4>
   }
   const filtered = drinks.map((item) => {
-    const { idDrink, strDrink, strDrinkThumb, srtAlcoholic, strGlass } = item
+    const { idDrink, strDrink, strDrinkThumb, strAlcoholic, strGlass } = item
     return {
       id: idDrink,
       name: strDrink,
       image: strDrinkThumb,
-      info: srtAlcoholic,
+      info: strAlcoholic,
       glass: strGlass,
     }
   })

@@ -6,22 +6,17 @@ const SearchForm = ({ searchTerm }) => {
   const isSubmitting = navigation.state === 'submitting'
   return (
     <Wrapper>
-      <form action='' className='form'>
+      <Form method='get' className='form'>
         <input
           type='search'
           name='search'
           className='form-input'
           defaultValue={searchTerm}
         />
-        <button
-          className='search'
-          type='submit'
-          className='btn'
-          disabled={isSubmitting}
-        >
+        <button type='submit' className='btn' disabled={isSubmitting}>
           {isSubmitting ? 'searching...' : 'search'}
         </button>
-      </form>
+      </Form>
     </Wrapper>
   )
 }
